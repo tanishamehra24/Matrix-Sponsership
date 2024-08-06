@@ -1,4 +1,6 @@
 *{
+    margin: 0%;
+    padding: 0%;
     background-color:#000000;
     color: white;
 }
@@ -7,9 +9,38 @@ h1{
     text-align: center;
     font-size: 3rem;
     color: #00ffda;
-    font-family:sans-serif;
-   font-weight: bold;
+    font-family: "Vibur",sans-serif;
+   font-weight: 400;
+   text-shadow:
+   0 0 7px #12ffd8,
+   0 0 42px #00ffd4,
+   0 0 82px #00ffda,
+   0 0 92px #00ffd4,
+   0 0 102px #00ffda,
+   0 0 151px #00ffd4,;
+   animation: glow 0.50s ease-in-out infinite alternate-reverse;
 }
+ @keyframes glow{
+    100%{
+        text-shadow:
+        0 0 19px #00ffd4,
+        0 0 40px #00ffda,
+        0 0 80px #00ffd4,
+        0 0 90px #00ffd4,
+        0 0 100px #00ffd4,
+        0 0 150px #00ffd4;
+    }
+    0%{ text-shadow:
+        0 0 18px #12ffd8,
+        0 0 38px #12ffd8,
+        0 0 73px #12ffd8,
+        0 0 80px #12ffd8,
+        0 0 94px #12ffd8,
+        0 0 140px #12ffd8;
+    }
+
+    }
+
 /* download proposal */
 span{
     font-size: 2rem;
@@ -85,7 +116,7 @@ background:transparent;
     color: #000;
 }
 
-/* about us section */
+/* about us section  and why sponsor us section */ 
 .AboutContainer{
      margin-top: 8rem ;
     margin-bottom: 8rem;
@@ -94,7 +125,7 @@ background:transparent;
    justify-content: space-evenly;
 }
 
-.about{
+.about,.whySponsorUs{
     height: 15rem;
     width: 20rem;
     margin:30px;
@@ -103,23 +134,20 @@ background:transparent;
     justify-content:center;
 }
      
-#para{
+#para,#content{
     padding: 18px;
     background-color: #00ffd4;
     color: black;
     font-size: 1rem;
     border-radius: 10px;
     border:3px solid white;
+
 }
-#heading2{
+
+#heading2,#heading3{
    font-size: 2.5rem;
    }
 
-   /* why sponsor us  */
-
-#heading3{
-     font-size:2.5rem;
-}   
 
 .Container{
     margin-bottom:8rem;
@@ -127,24 +155,6 @@ background:transparent;
    align-items: center;
    justify-content: space-evenly;
 }
-.whySponsorUs{
-    height: 15rem;
-    width: 20rem;
-    margin:30px;
-    display:flex;
-    align-items: center;
-    justify-content:center;
-}
-
-#content{
-    padding: 18px;
-    background-color: #00ffd4;
-    color: black;
-    font-size: 1rem;
-    border-radius: 10px;
-    border:3px solid white;
-}
-
 
 /* team members */
 .teamContainer{
@@ -188,4 +198,26 @@ img{
     margin:1.5rem ;
     height:5rem ;
     width: 5rem;
+}
+@media screen and (max-width:600px)and (min-width:100px){
+    #content,#para{
+        padding: 2px;
+    font-size: 10px;
+   }
+   span{
+    font-size: 25px;
+   }
+   #heading3,#heading2{
+    font-size: 30px;
+   }
+   .whySponsorUs,.about{
+    width: 12rem;
+   }
+    .downloadBtn{
+        margin-left: 20px;
+    }
+    .downloadContainer{
+        transform:scale(.8);
+    }
+
 }
